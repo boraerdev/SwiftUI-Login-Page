@@ -16,7 +16,9 @@ struct WelcomeScreen: View {
                     Spacer()
                     Image("sally").resizable().aspectRatio(contentMode: .fit)
                     Spacer()
-                    PrimaryButton(text: "Keşfet")
+                    NavigationLink(destination: DiscoverPage().navigationBarHidden(true)) {
+                        PrimaryButton(text: "Keşfet")
+                    }.navigationBarHidden(true)
                     NavigationLink(destination: LoginPage().navigationBarHidden(true)) {
                         secondaryButton(text: "Kayıt Ol").padding(.vertical)
                     }.navigationBarHidden(true)
